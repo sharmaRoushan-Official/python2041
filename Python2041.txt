@@ -1,0 +1,78 @@
+Python: 
+--------------------------------------------
+
+Python is a high-level, general purpose, interpreted programming language that is designed to be easy to read, easy to write and easy to learn.
+---------------------------------------------------------------------------------------------------
+
+Python Content:-
+-------------------------
+
+1). Python Basic
+2). Python Data types
+3). String data type
+4). List Data type
+5). Tuple data type
+6). Set data type
+7). dictionary data type
+8). condition in python
+9). loop in python
+	> Entry controlled loop
+		> for-in 
+		> While
+	> Exit controlled loop
+		> do-while [in c programming language]
+10. function in python
+	> Built-in Functions [71 built-in functions)
+	> User-defined functions
+11. Exceptional handling
+	> try, except, else, finally, raise, assert
+12. OOPs in Python
+	> Class and Object
+	> 4-Pillars of oops
+	> 1.Inheritance
+		i. Single/Simple Inheritance
+		ii. Multiple Inheritance
+		iii. Multilevel Inheritance
+		iv. Hierarchical Inheritance
+		v. Hybrid Inheritance
+	> 2.Polymorphism
+		>> 1. Method overriding
+		>> 2. Method overloading
+		>> 3. Operator Overloading
+		>> 4. Duck Typing
+	> 3. Encapsulation
+		>> Access Modifiers
+		>> 1. Public
+		>> 2. Protected
+		>> 3. Private
+	> 4. Data Abstraction
+		>> from abc import ABC, abstract method
+13. File Handling in Python
+	>> 1. Reading Files using python
+	>> 2. Writing Files in python
+14. Lambda in Python
+	>> map()
+	>> filter()
+	>> reduce()
+	>> apply()
+15. List Comprehension in Python
+16. Generator in Python
+17. Decorator in Python
+18. JSON in Python
+19. API in python
+20. Minimal Project
+------------------------------------------------------------------------------------------------------------------
+
+IDE - [Integrated Development and Environment]
+----------------------------------------------------------------------
+
+[Anoconda]
+
+[python]
+------------------------------------
+
+
+
+
+
+
