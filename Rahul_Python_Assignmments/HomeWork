@@ -1,0 +1,280 @@
+HomeWork
+# 1. Accepts any city and display their Monuments.
+
+#cityName-------------------> Monument
+
+# "Delhi"--------------------> ['Redfort','QutubMinar','LotusTemple']
+# Agra-----------------------> "TajMahal"
+# Jaipur---------------------> "HawaMahal/JalMahal"
+# Amritsar-------------------> "GoldenTemple,Jalliawalabagh"
+# Madurai--------------------> "Meenakshi Temple"
+# Mysore---------------------> "Mysore palace"
+# Mumbai --------------------> "Gateway of India"
+# Sanchi---------------------> "Sanchi Stupa"
+# Hydrabad-------------------> "Charminar"
+# Gujarat -------------------> "Statue of Unity"
+
+city = input("Enter your val: ")
+city = city.capitalize()
+match city:
+    case "Delhi":
+            print("Redfort,QutubMinar,LotusTemple")
+    case "Agra":  
+            print("TajMahal")
+    case "Jaipur":
+            print("HawaMahal/JalMahal")
+    case "Amritsar":  
+            print("GoldenTemple,Jalliawalabagh")
+    case "Madurai":
+                print("Meenakshi Temple")
+    case "Mysore":  
+                print("Mysore palace")
+    case "Mumbai":
+                print("Gateway of India")
+    case "Sanchi":  
+                print("Sanchi Stupa")
+    case "Hydrabad":
+                print("Charminar")
+    case "Gujarat":  
+                print("Statue of Unity")
+    case _:
+     print("City is not in list")
+_______________________________________________________________________________________________________		
+	 
+# 2. A shop wil give you discount of 20%, if the cost of purchased is more than 2000, and if 
+# purchased amount will be 1000 more than then it will discount 10%, And if purchased amout 
+# is less than 1000- "No discount" as well print how much need more shopping 
+# amount will to get minimum discount.
+val = int(input("Enter amount:"))
+if val >=2000:
+    per = "20%"
+    calval= (val*20)/100
+    totalAmount = val - calval
+    # print(f"No discount! you need to buy {calval}rs more items")
+    # print(totalAmount)
+    print("--------------E-Bill-------------------")
+    print(f"Total Shopping Amount ₹: {val}")
+    print(f"Total Discount %: {per}")
+    print(f"Total Discount Amount ₹: {calval}")
+    print(f"Total Amount To Pay ₹: {totalAmount}")
+elif val>=1000 and val <2000: 
+    per = "10%"
+    calval= (val*10)/100
+    totalAmount = val - calval
+    # print(f"No discount! you need to buy {calval}rs more items")
+    # print(totalAmount)
+    print("--------------E-Bill-------------------")
+    print(f"Total Shopping Amount ₹: {val}")
+    print(f"Total Discount %: {per}")
+    print(f"Total Discount Amount ₹: {calval}")
+    print(f"Total Amount To Pay ₹: {totalAmount}")
+    print("Warning!!!")
+    cost = 2000-val
+    print(f"If you are shopping more amount ₹ {cost} then you will get 20% Discount")
+elif val>0 and val<1000:
+    per = "0%"
+    calval= (val*0)/100
+    totalAmount = val - calval
+    # print(f"No discount! you need to buy {calval}rs more items")
+    # print(totalAmount)
+    print("--------------E-Bill-------------------")
+    print(f"Total Shopping Amount ₹: {val}")
+    print(f"Total Discount %: {per}")
+    print(f"Total Discount Amount ₹: {calval}")
+    print(f"Total Amount To Pay ₹: {totalAmount}")
+    print("Warning!!!")
+    cost = 1000-val
+    print(f"If you are shopping more amount ₹ {cost} then you will get 10% Discount")
+	
+_______________________________________________________________________________________________________		
+
+# 3.A compay will decided to give bonus to the employee according to the following criteria:
+# Time period of the service -------------------> Bonus
+# More then 10 Years ---------------------------> 10%
+# >=6 and <=10 ---------------------------------> 8%
+# <6 -------------------------------------------> 5%
+# Ask the user for their salary and yers of service and then calcualte the bonus amount is, 
+# and display the total salary after increment of bonus.
+val = int(input("Enter years:"))
+if val > 10:
+    print(f"Time period of the service {val} years")
+    print("More then 10 Years")
+    print("You will get Bonus 10%")
+elif val >=6 and val<=10:
+    print(f"Time period of the service {val} years")
+    print(">=6 and <=10")
+    print("You will get Bonus 8%")
+elif val<6 and val>0:
+    print(f"Time period of the service {val} years")
+    print("<6")
+    print("you will get Bonus 5%")
+else: 
+    print("enter valid year")
+_______________________________________________________________________________________________________		
+
+# 4. Write a program to accept the cost price of a bike and display the road tax to be paid 
+# according to the following criteria:
+# Cost price of bike (in RS) ------------ Tax:
+# >100000 -------------------------------> 15%
+# >50000 and <=100000---------------------> 10%
+# <50000 --------------------------------> 8%
+val = int(input("Cost price of bike ₹ (in RS):"))
+if val > 100000:
+     print("15% tax")
+elif val>50000 and val<=100000:
+    print("10% tax")
+elif val<50000:
+    print("8% tax")
+else: 
+    print("enter valid amount")
+_______________________________________________________________________________________________________		
+
+# 5. Write a program to check person is sernior citizen or not?
+val = int(input("Enter age:"))
+if val >60:
+        print("Senior citizen")
+elif val<=60: 
+    print("Not Senior citizen")
+else: 
+    print("enter valid age")
+	
+# 6. Write a program to check whether a number (accepted from the user) is positive or negative.
+val = int(input("Enter number:"))
+if val <0:
+        print("-ve")
+elif val>=0: 
+    print("+ve")
+else: 
+    print("enter valid num")
+_______________________________________________________________________________________________________		
+
+# 7. Accept the following from the user and calculate the percentage of the class attendence.
+# Total number of working days.
+# Total number of absent.
+# if percentage is less than 75%, then student will not sit the exam.
+val = int(input("Total number of working days:"))
+val1 = int(input("Total number of absent:"))
+presentdays=val-val1
+percent=int(presentdays/val*100)
+if percent >=75:
+        print(f"student will sit the exam, your working percent is {percent}%")
+elif percent<=75: 
+    print(f"student will not sit the exam, your working percent is {percent}%")
+else:
+      print(f"{percent}")
+	  
+_______________________________________________________________________________________________________		
+	  
+#8. Calculate letters grades (A,B,C,D,E) based on score ranges (eg.-90-100:A,80-89:B,70-79:C,
+#60-69:D,50-59:E)
+val = int(input("Enter grade:"))
+if val >=90 and val<100:
+        print("A")
+elif val >=80 and val<89:
+        print("B")
+elif val >=70 and val<79:
+        print("C")
+elif val >=60 and val<69:
+        print("D")
+elif val >=50 and val<59:
+        print("E")
+else:
+        print("Enter valid grade")
+_______________________________________________________________________________________________________		
+         
+# 9. Simulate a traffic light, if the light is "Green", print "Go", If yellow, print "Caution",
+# if red "Stop!"
+val = input("Enter signal color:")
+if val.lower() == "green":
+        print("Go!")
+elif val.lower() == "yellow":
+        print("Caution!")
+elif val.lower() == "red":
+        print("Stop!")
+else:
+        print("Enter valid color")
+_______________________________________________________________________________________________________		
+         
+# 10. Check user roles, if "admin",print "Access granted", if "Editor",print "Can edit". If viewer
+# print "Unknown role"
+val = input("Check you role (admin/editor/viewer):")
+if val.lower() == "admin":
+        print("Access granted")
+elif val.lower() == "editor":
+        print("Can edit!")
+elif val.lower() == "viewer":
+        print("Unknown role")
+else:
+        print("Enter valid role")
+_______________________________________________________________________________________________________		
+         
+
+
+# 11. Apply discount based on purchase amount. If over $100 first show in rupees "₹ 86.99" then 15% discount 
+# if over $50, 5% discount, otherwise no discount.
+import datetime
+import random
+val = float(input("Purchase amount in doller $:"))
+inrup = 86.99*val
+discount=(val*15/100)
+disinrup1 = discount*86.99
+x=datetime.datetime.now()
+unique_id = random.sample(range(1, 101),1)
+if val > 100:
+        print("----------------------------------------------------------")
+        print(f"receipt number: {unique_id}         date:{x}")
+        print("----------------------------------------------------------")
+        print(f"Your purcase amount in rupees: {inrup}")
+        print(f"Congratulation! you got 15%' discount in ₹{disinrup1}/${discount} on your purchase " )
+if val >50 and val<=100:
+        inrup1 = (100-val)*86.99
+        val4=100-val
+        discount=(val*15/100)
+        disinrup1 = discount*86.99
+        print("----------------------------------------------------------")
+        print(f"receipt number: {unique_id}         date:{x}")
+        print("----------------------------------------------------------")     
+        print(f"Your purcase amount in rupees: {inrup1}")
+        print(f"Congratulation! you got 5%' discount in ₹{disinrup1}/${discount} on your purchase" )
+        print("----------------------------------------------------------")
+        print(f"Warning! if you buy {inrup1}₹ or {val4}$ more then you are applicable for 15% discount")
+
+_______________________________________________________________________________________________________		
+		 
+# 12. Determine if a character is uppercase, lowercase, a digit or a special character.
+val3 = input("Enter string or number:")
+if val3.isalnum() ==False:
+    print("Special char")
+if isinstance(val3,str) == True and val3.isalpha() ==True:
+            if val3==val3.lower():
+                print("In lower case")
+            elif val3==val3.upper():
+                print("In upper case")
+elif val3.isdigit() ==True: 
+                print("Is number")
+
+_______________________________________________________________________________________________________		
+
+	
+# 15. Crete a simple calulator that performs basic arithmetic operations based on two user input.
+# (^,*,/,-,+)
+val1 = int(input("Enter first number:"))
+val2 = int(input("Enter second number:"))
+val3 = input("Enter operand to be performed:")
+match val3:
+    case "+":
+        val4=val1+val2
+        print(f"Result: {val4}")
+    case "-":
+        val4=val1-val2
+        print(f"Result: {val4}")
+    case "*":
+        val4=val1*val2
+        print(f"Result: {val4}")
+    case "/":
+        val4=val1/val2
+        print(f"Result: {val4}")
+    case _:
+        print("Enter + or - or * or / operand")
+		
+		

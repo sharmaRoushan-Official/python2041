@@ -1,0 +1,177 @@
+1. Write a Python program to check whether a number is **positive**, **negative**, or **zero**.
+
+Marks =int(input("Enter value:"))
+if Marks == 0:
+      print("Zero") 
+elif 	Marks > 0:
+        print("Positive") 
+else:
+    print("Negative") 
+ 
+______________________
+2. Write a Python program to check if a number is **even** or **odd**.
+Marks =int(input("Enter value:"))
+if Marks%2 == 0:
+    print("Even") 
+else:
+    print("Odd")
+_____________________
+3. Write a Python program to check if a person is **eligible to vote** (age ≥ 18).
+age =int(input("Enter age:"))
+if age  > 18: 
+    print("Eligible ") 
+else:
+    print("Not eligible")  
+______________________________
+4. Write a Python program to find the **largest of two numbers**.
+Number1 =int(input("Enter 1 number:"))
+Number2 =int(input("Enter 2 number:"))
+if Number1  > Number2: 
+    print("Number 1 is greater ") 
+else:
+    print("Number 2 is greater") 
+__________________________________	
+5. Write a Python program to check whether a number is **divisible by 5** or not.
+Number1 =int(input("Enter a number:"))
+if Number1%5==0: 
+    print("Number divisible by 5 ") 
+else:
+    print("Number not divisible by 5")  
+___________________________________   
+6. Write a Python program to check if a number is **a multiple of both 3 and 5**.
+Num =int(input("Enter value:"))
+if Num%3 == 0 and Num%5 == 0:
+      print("Nummber is multiple of both 3 and  5") 
+else:
+      print("Nummber is not  multiple of both 3 and 5 ")
+
+7. Write a Python program to check whether a character is a **vowel or consonant**.
+char =input("Enter value:")
+if char.lower() =='a' or char.lower() =='e' or char.lower() =='i' or char.lower() =='o' or char.lower() =='u':
+        print('Vowel')
+else:
+        print('Consonants')
+
+_____________________________________
+
+8. Write a Python program to determine whether a given year is a **leap year** or not.
+yearval =input("Enter value:")
+if (yearval % 4 == 0 and yearval % 100 != 0) or (yearval % 400 == 0):
+     print('Leap year')
+else:
+    print('Not leap year')
+
+_________________________________________
+
+9. Write a Python program to check if a number is **within the range 1–100**.
+Num =int(input("Enter value:"))
+if Num >=1 and Num <=100:
+     print('In range ')
+else:
+    print('Not in range')
+_______________________________________
+
+10. Write a Python program to check if a person is a **child (≤12)**, **teenager (13–19)**, or **adult (≥20)**.
+Num =int(input("Enter value:"))
+if Num <= 12:
+    print("Child")
+elif Num >= 13 and Num<=19:
+    print("Teenager")
+elif Num >= 20:
+    print("Adult")
+	____________________________________
+
+
+
+### ⚙️ **Intermediate Level (11–20)**
+
+11. Write a Python program to find the **largest among three numbers**.
+val1 = 10
+val2 = 7
+val3 = 5
+
+if (val1>val2) and (val1>val3):
+   largenum=val1
+elif (val1<val2) and (val3<val2):
+   largenum=val2
+else:
+    largenum=val3
+
+print("The largest number is", largenum)
+
+#12. Write a Python program to check whether a number is **positive and even**, **positive and odd**, or **negative**.
+
+
+Marks =int(input("Enter value:"))
+if Marks >= 0 and Marks%2 == 0:
+      print("even and +ve") 
+elif 	Marks >= 0 and Marks%2 !=0:
+        print("odd and +ve") 
+else:
+    print("Negative") 
+	
+#13. Write a Python program to check if a number is **a single-digit, two-digit, or more than two digits**.
+Marks =int(input("Enter value:"))
+maxlen=len(str(Marks))
+if maxlen == 1:
+      print(f"{maxlen} digit") 
+elif  maxlen  == 2:
+        print(f"{maxlen} digit") 
+else:
+    print("More than two digit") 
+	
+#14.Write a Python program to check if a number is **a single-digit, two-digit, or more than two digits**.
+marks =int(input("Enter value:"))
+if marks >= 90:
+        print("Grade: A")
+elif marks >= 80:
+        print("Grade: B")
+elif marks >= 70:
+        print("Grade: C")
+elif marks >= 60:
+        print("Grade: D")
+else:
+        print("Grade: F")
+		
+15. Write a Python program to check whether a character is a **digit**, **uppercase letter**, **lowercase letter**, or **special character**.
+ #Write a Python program to valeck if a number is **a single-digit, two-digit, or more than two digits**.
+val =input("Enter value:")
+if val.isdigit():
+        print( f"'{val}' is a Digit.")
+    # valeck for uppercase letter
+elif val.isupper():
+        print( f"'{val}' is an Uppercase Letter.")
+    # valeck for lowercase letter
+elif val.islower():
+        print( f"'{val}' is a Lowercase Letter.")
+    # If it is none of the above, it's a special valaracter
+else:
+        print( f"'{val}' is a Special valaracter.")
+		
+		
+16. Write a Python program to determine whether a given year is a **century year** (divisible by 100) or not.
+year = int(input("Enter a year: "))
+if year % 100 == 0:
+    print(f"{year} is a century year.")
+else:
+    print(f"{year} is not a century year.")
+17. Write a Python program to check whether a triangle is **equilateral**, **isosceles**, or **scalene**.
+
+a=int(input("enter trangle length of a side:"))
+b=int(input("enter trangle length of b side:"))
+c=int(input("enter trangle length of c side:"))
+if a == b == c:
+    print("Equilateral Triangle")
+elif a == b or b == c or a == c:
+    print("Isosceles Triangle")
+else:
+    print("Scalene Triangle")
+
+
+18. Write a Python program to check whether the entered password matches the **stored password** or not.
+
+a=input("enter password")
+if a.lower() == "password_value":
+    print("stored password")
+else:
+    print("password not matching")

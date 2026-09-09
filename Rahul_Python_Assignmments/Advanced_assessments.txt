@@ -1,0 +1,125 @@
+21. Write a Python program to calculate **discount** based on purchase amount:
+
+    * > 1000 → 20% discount
+    * 500–1000 → 10% discount
+    * <500 → No discount
+	
+val =  int(input("Enter price:"))
+if val>1000:
+    calval=val*20/100
+    print(f"Discount 20% applicable on {val} so discount would be:{calval}")
+elif val>500 and val<=1000:
+    calval=val*10/100
+    print(f"Discount 10% applicable on {val} so discount would be:{calval}")
+elif val<=500:
+    print(f"No discount on {val}")
+else:
+    print("Enter valid amount")
+_______________________________________________________________________________________________________
+22. Write a Python program to check if a given **day number (1–7)** corresponds to **weekday or weekend**.
+day = int(input("Enter weekday "))
+
+match day:
+    case 1:
+        print("Monday")
+    case 2:
+        print("Tuesday")
+    case 3:
+        print("Wednesday")
+    case 4:
+        print("Thursday")
+    case 5:
+        print("Friday")
+    case 6:
+        print("Saturday")
+    case 7:
+        print("Sunday")
+    case _:
+        print("Invalid")
+_______________________________________________________________________________________________________
+23. Write a Python program to decide the **mode of transport** based on distance:
+
+    * <3 km: Walk
+    * 3–15 km: Bike
+    * > 15 km: Car
+	
+val=int(input("Enter km, programm will decide mode of transport: "))
+
+if val <3 and val >0:
+    print("Walk")
+elif val>=3 and val<=15:
+    print ("Bike")
+elif val>15:
+    print ("Car")
+else:
+    print("Enter valid  number")
+_______________________________________________________________________________________________________
+24. Write a Python program to check if a **username** starts with a letter and not a number.
+val = input("Enter user name: ")
+if val == val.capitalize():
+    print("Valid username")
+else: 
+    print("Invalid username, try again!")   
+
+_______________________________________________________________________________________________________
+25. Write a Python program to calculate the **electricity bill**:
+
+    * ≤100 units → ₹1 per unit
+    * 101–200 units → ₹1.5 per unit
+    * > 200 units → ₹2 per unit	
+	val = int(input("Enter unit:"))
+	if val <=100 and val >0:
+    calval= val*1
+    print(f"You entered {val} units, Rs 1  for per unit so calculated bill:{calval}")
+elif val>=101 and val<=200:
+    calval= val*1.5
+    print(f"You entered {val} units, Rs 1.5  for per unit so calculated bill:{calval}")
+elif val>200:
+    calval= val*2
+    print(f"You entered {val} units, Rs 2  for per unit so calculated bill:{calval}")
+else:
+    print("Enter valid  unit")
+_______________________________________________________________________________________________________
+26. Write a Python program to determine if a student **passed or failed** based on marks in three subjects (passing marks = 40).
+sub1 = int(input("Enter marks for Subject 1: "))
+sub2 = int(input("Enter marks for Subject 2: "))
+sub3 = int(input("Enter marks for Subject 3: "))
+if sub1 >= 40 and sub2 >= 40 and sub3 >= 40:
+        print("PASSED")
+else:
+      print("FAILED ")
+_______________________________________________________________________________________________________
+28. Write a Python program to check whether a **bank account balance** is **low (<1000)**, **medium (1000–5000)**, or **high (>5000)**.
+balance = int(input("Enter balanced amount: "))
+if balance < 1000:
+        print("Low")
+elif 1000 <= balance and balance<= 5000:
+        print("Medium")
+else:
+        print("High")
+_______________________________________________________________________________________________________
+29. Write a Python program to classify **BMI (Body Mass Index)**:
+
+    * <18.5 → Underweight
+    * 18.5–24.9 → Normal
+    * 25–29.9 → Overweight
+    * ≥30 → Obese
+
+bmi = int(input("Enter bmi: "))
+if bmi < 18.5:
+        print("Underweight")
+elif 18.5 <= bmi <= 24.9:
+        print("Normal")
+elif 25 <= bmi <= 29.9:
+        print("Overweight")
+else:
+        print("Obese")
+_______________________________________________________________________________________________________		
+30. Write a Python program to check whether an input string is **empty**, **only spaces**, or **contains characters**.	
+		text = input("Enter text: ")
+if len(text) < 1:
+        print("The string is empty.")
+elif text.isspace():
+        print("The string contains spaces.")
+else:
+        print("The string contains characters.")
