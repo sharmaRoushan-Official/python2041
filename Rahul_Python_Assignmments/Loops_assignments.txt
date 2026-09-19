@@ -250,6 +250,15 @@ for i in range(1,le):
         j=j+1
 print("Vowels in string: ",{j})
 
+
+i=0
+val="rahul"
+while i< len(val):
+    if val[i] in 'aeiou':
+        print(val[i])
+        i=i+1
+    else:
+        i=i+1
 ---------------------------------------------------------
 28. Print Fibonacci series up to `n` terms using a loop.
 lst = [0, 1]
