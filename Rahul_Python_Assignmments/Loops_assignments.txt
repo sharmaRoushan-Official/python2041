@@ -1,0 +1,264 @@
+1. Print numbers from 1 to 10 using a for loop.
+for i in range (1,11): 
+       print(i)
+
+i =1
+j =11
+while i<j:
+       print(i)
+       i=i+1
+
+--------------------------------------------
+2. Print all even numbers between 1 and 100.
+
+for i in range (1,101): 
+       if i%2==0:
+              print(i)
+i =1
+j =101
+while i<j:
+       if  i%2==0:
+              print(i)
+       i=i+1
+---------------------------------------------	   
+3. Print the table of a given number (e.g., input 5 → 5, 10, 15, … 50).
+i = int(input("Enter num:"))
+for c in range(i-1,11):
+    print(c*i)
+
+i = int(input("Enter num:"))
+c=1
+j =11
+while c<j:
+        print(c*i)
+        c=c+1
+		
+		
+---------------------------------------------
+4. Calculate the sum of numbers from 1 to n.
+i = int(input("Enter num:"))+1
+total=0
+for j in range (1,i):
+    total = total + j
+print(total)
+
+i = int(input("Enter num:"))+1
+total=0
+j=1
+while j<i:
+    total = total + j
+    j=j+1
+print(total)
+
+__________________________________________________
+
+5. Calculate the factorial of a number using a loop.
+
+i = int(input("Enter num:"))+1
+total=1
+for j in range (1,i):
+    total = total*j
+print(total)
+
+i = int(input("Enter num:"))
+total=1
+j=1
+while j<i+1:
+    total = total*j
+    j=j+1
+print(total)
+
+
+------------------------------------------------
+6. Print all numbers divisible by 3 and 5 from 1 to 100.
+
+for i in range (1,101): 
+       if i%3==0 and i%5==0:
+              print(i)
+
+
+i =1
+j =101
+while i<j:
+       if i%3==0 and i%5==0:
+              print(i)
+       i=i+1
+------------------------------------------------------	   
+7. Print the reverse of a given number (e.g., 123 → 321).
+for i in range (321,123,-1): 
+    print(i)
+
+
+i=321
+j=123
+while i > j: 
+    print(i)
+    i=i-1
+---------------------------------------------------------
+8. Count digits in a number using a loop.
+i=int(input("Enter num:"))
+j=len(str(i))
+sumval=0
+for n in (1,j-1):
+   sumval =n+sumval
+   print(sumval)
+   
+   ##Output is correct but noy sure if its correct way
+--------------------------------------------------------
+9. Print all characters of a string using a loop.
+val = input("Enter a string: ")
+for char in val:
+    print(char)
+	
+val = input("Enter a string: ")
+j= 0
+while j < len(val):
+    print(val[j])
+    j= j+1
+	
+-----------------------------------------------------------
+10. Print only vowels from a string input by the user.
+val = input("Enter a string: ").lower()
+j= 0
+le=len(val)
+for i in range(1,le):
+    if val[i] in 'aeiou':
+        print(val[i])
+    
+	
+val = input("Enter a string: ").lower()
+j= 0
+while j < len(val):
+    if val[j] in 'aeiou':
+        print(val[j])
+    j= j+1
+	
+---------------------------------------------
+
+Reverse a string using a while loop
+val = input("Enter a string: ").lower()
+j=  len(val)-1
+strval=''
+while j >= 0:
+    strval=strval+val[j]
+    j= j-1
+print(strval)
+--------------------------------------------
+#16
+
+for i in range(1,5):
+    for j  in range ( i) :
+            print("*", end = " ")
+    print()
+	
+
+op:
+*
+* *
+* * *
+* * * * 
+------------------------------------------------
+#Print multiplication tables from 1 to 5 using nested loops.
+a=1
+for i in range(1,6): 
+    print(f"---Table of {i}------")
+    for j  in range (1,11) :
+         print(f"{i} X {j} = {i*j}")
+    print("----------------------")
+-------------------------------------------------
+#19
+
+for i in range(1,5):
+    for j  in range ( i) :
+            print(j+1, end = " ")
+    print()
+
+op:
+
+1
+12
+123
+1234
+
+----------------------------------------------
+#20 Print Floyd's Triangle:
+
+a=1
+for i in range(1,5):
+   
+    for j  in range ( i) :
+         print(a,end=" ")
+         a=a+1
+       
+    print()
+
+op:
+1 
+2 3 
+4 5 6 
+7 8 9 10 
+-----------------------------------------------
+21. Find the maximum number in a list using a loop.
+lst = [12,20,30,40]
+j=0
+for i in lst:   
+         if i>j:
+            j=i
+print(j)
+
+------------------------------------------------------
+22. Calculate the average of numbers in a list.
+#Calculate the average of numbers in a list.
+lst = [12,20,30,40]
+j=0
+for i in lst:   
+        j=j+i
+j=j/len(lst)
+print(j)
+-------------------------------------------------------
+23. Count how many even numbers are in a list.
+#Count how many even numbers are in a list.
+lst = [12,20,30,40,11,13]
+j=[0]
+for i in lst:   
+        if i%2==0:
+            j=i
+            print(j)
+-------------------------------------------------------
+24. Remove all negative numbers from a list using a loop.
+#Count how many even numbers are in a list.
+lst = [12,20,30,40,11,13,-1]
+for i in lst:   
+        if i<0:
+            print(i)
+---------------------------------------------------------			
+#25. Create a new list with squares of numbers from another list.
+lst = [2,4,6,8]
+sqr=[0]
+for i in lst:   
+        i=i*i
+        sqr=i
+        print(sqr)
+		
+----------------------------------------------------------
+26. Count the number of vowels in a string.
+val = input("Enter a string: ").lower()
+j= 0
+le=len(val)
+for i in range(1,le):
+    if val[i] in 'aeiou':
+        j=j+1
+print("Vowels in string: ",{j})
+
+---------------------------------------------------------
+28. Print Fibonacci series up to `n` terms using a loop.
+lst = [0, 1]
+for i in range(0,10):
+       lst.append(lst[-1]+lst[-2])
+print(lst)
+
+30. Print pattern:
+lst = "ABCDE"
+for j  in range(0,len(lst)):
+        print(lst[j-1]*j)
+        
