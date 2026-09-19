@@ -257,8 +257,25 @@ for i in range(0,10):
        lst.append(lst[-1]+lst[-2])
 print(lst)
 
+
+##30. Print pattern:
+lst = [0, 1]
+j=1
+while j < 10:
+       lst.append(lst[-1]+lst[-2])
+       j=j+1;
+print(lst)
+
+
+-------------------------------------------------------
+
 30. Print pattern:
 lst = "ABCDE"
 for j  in range(0,len(lst)):
         print(lst[j-1]*j)
-        
+
+lst = "ABCDE"
+j=1
+while j < len(lst):
+        print(lst[j-1]*j)
+        j=j+1;
