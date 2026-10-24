@@ -1,0 +1,343 @@
+#Create a base class Animal with a method speak().
+#Create two subclasses Dog and Cat that override speak() and
+#print different sounds.
+
+class Animal:
+    def speak():
+        print("Base class")
+class dog(Animal):
+    def speak():
+        print("dog class")
+class cat(Animal):
+    def speak():
+        print("cat class")
+
+e = cat
+e.speak()
+d = dog
+d.speak()
+------------------------------------------------------------------------------
+ #Create a class Vehicle with attributes brand and model. 
+ #Create subclasses Car and Bike that add a method vehicle_type() 
+ #returning the type of vehicle.
+
+class Vehicle:
+    def __init__(self,brand,model):
+        self.brand = brand
+        self.model = model   
+class Car(Vehicle):
+    def vehicle_type(self):
+        print(f"{self.brand} car {self.model} model")
+class Bike(Vehicle):
+    def vehicle_type(self):
+        print(f"{self.brand} car {self.model}")
+
+
+c = Car("Tata", "suv")
+c.vehicle_type()
+c = Bike("Honda", "Shine")
+c.vehicle_type()
+---------------------------------------------------------------------------------
+#Create a class Person with name and age. 
+#Create a derived class Student that adds student ID and grade. 
+#Write a method to print complete details.
+
+class Person:
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age   
+class Student(Person):
+     def __init__(self,name,age,student_ID,grade):
+            super().__init__(name, age)
+            self.student_ID = student_ID
+            self.grade = grade  
+     def stud_details(self):       
+        print(f"Name: {self.name}")
+        print(f"age: {self.age}")
+        print(f"student_ID: {self.student_ID}")
+        print(f"grade: {self.grade}")
+a = Student("Rahul","32","XYZ","A")
+a.stud_details()
+---------------------------------------------------------------------------------
+# Demonstrate *multilevel inheritance* using classes A → B → C, 
+# each with a method. Call all three methods from an object of class C.
+
+class A:
+    def __init__(self, name):
+        self.name = name
+
+    def name_val(self):
+        print(f"Name: {self.name}")
+
+
+class B(A):
+    def __init__(self, name, age):
+        super().__init__(name)
+        self.age = age
+
+    def age_val(self):
+        print(f"Age: {self.age}")
+
+
+class C(B):
+    def __init__(self, name, age, salary):
+        super().__init__(name, age)
+        self.salary = salary
+
+    def sal_val(self):
+        print(f"Salary: {self.salary}")
+
+
+a = C("Rahul", 32, 100)
+
+a.name_val()
+a.age_val()
+a.sal_val()
+-------------------------------------------------------------
+#5. Create a parent class Shape with a method area(). 
+# Derive classes Circle and Rectangle.
+#  Implement the area method in each subclass.
+class Shape:
+     def area(self):
+        pass
+
+
+class Circle(Shape):
+    def __init__(self, radius):
+                self.radius = radius
+                self.val= 3.14*(self.radius*2)
+    def area(self):
+         print(f"Circle area: {self.val}")
+
+
+class Rectangle(Shape):
+    def __init__(self, length,width):
+        self.length = length
+        self.width = width
+        self.val=self.length*self.width
+
+    def area(self):
+        print(f"Rectangle area: {self.val}")
+
+
+a = Rectangle(2,4)
+a.area();
+a = Circle(5)
+a.area();
+---------------------------------------------------------------
+### *Polymorphism (6–10)*
+#Write a function display_info(obj) that calls obj.info(). 
+#Pass objects of two different 
+#classes having an info() method to demonstrate polymorphism.
+
+class Phone:
+    def info(self):
+        return "Phone"
+
+class Laptop:
+    def info(self):
+        return "Laptop"
+
+def display_info(i):
+        print(i.info())
+
+p=Phone()
+l=Laptop()
+
+display_info(p);
+display_info(l);
+-----------------------------------------------------------------------
+#Create two classes Dog and Cat with a method sound(). 
+# Write a loop that iterates through objects of both classes and 
+# calls sound() using polymorphism.
+
+class dog:
+    def sound(self):
+        return "bho bho"
+
+class cat:
+    def sound(self):
+        return "mew mew"
+
+lst = [cat(),dog()]
+
+for i in lst:
+    print(i.sound())
+
+------------------------------------------------------------------------------
+# Demonstrate *operator overloading* by overloading 
+# the + operator for a class Point(x, y) to add coordinates.
+
+class point():
+    def val(self,a,b):
+        print(a+b)
+
+i=point()
+i.val(10,20)
+i.val('con','cat')
+----------------------------------------------------------------------------
+
+# 10. Implement method overriding: Parent class Bank has rate_of_interest().
+# Child classes SBI and HDFC override the method with different interest rates.
+
+class Bank:
+  def rate_of_interest(self):
+    print("8 percent")
+
+class SBI(Bank):
+  def rate_of_interest(self , bank_name):
+    print(f"{bank_name} provide 6 percent")
+
+class HDFC(Bank):
+  def rate_of_interest(self , bank_name):
+    print(f"{bank_name} provide 7 percent")
+
+h = HDFC()
+h.rate_of_interest('HDFC')   
+s = SBI()
+s.rate_of_interest('SBI')
+
+-------------------------------------------------------
+#Encapsulation
+#Create a class Account with private attributes __balance. 
+#Provide methods deposit() and withdraw() to modify it safely.
+ 
+class Account:
+   def __init__(self): 
+    __balance = 100
+    
+   def deposit(self,val):
+     __balance = val
+     print(__balance)
+   def withdraw(self,val):
+     __balance= val
+     print(__balance)
+
+a =Account()
+a.withdraw(50);
+------------------------------------------------------------
+
+#Create a class Account with private attributes __balance. 
+#Provide methods deposit() and withdraw() to modify it safely.
+ 
+class Account:
+   def __init__(self): 
+    self.__balance = 100  
+   def deposit(self,val):
+     self.__balance = self.__balance+val
+     print(self.__balance)
+   def withdraw(self,val):
+     self.__balance= self.__balance-val
+     print(self.__balance)
+
+a =Account()
+a.withdraw(20);
+--------------------------------------------------------------
+
+#12. Write a class with a private method __calculate_salary() and a 
+# public method get_salary() that internally calls the private method.
+class Account:
+   def __init__(self): 
+    self.__balance = 100  
+   def __calculate_salary(self):
+     print("Private method")
+   def get_salary(self):
+     self.__calculate_salary()
+     print("Public method")
+
+a =Account()
+a.get_salary();
+
+-----------------------------------------------------------------
+
+#Create a class Student with private attributes __marks. Write a method to set marks (with validation: marks must be 0–100).
+class Account:
+   def __init__(self): 
+    self.__marks = 0
+
+   def set_marks(self,marks):
+     if marks <= 100 and marks > 0:
+            self.__marks = marks
+            print(self.__marks)
+     else:
+            print("Invalid marks")
+a =Account()
+a.set_marks(80);
+
+-----------------------------------------------------------------
+
+#Encapsulation
+# Create a class with a protected attribute _data 
+# and a child class that modifies and prints the protected attribute.
+class base:
+   def __init__(self): 
+    self._price = 0
+
+class child(base):
+   def Modify_val(self,val):
+        print(f"before change: {self._price}")
+        self._price = val
+        print(f"after change: {self._price}")
+
+   
+a=child()
+a.Modify_val(100);
+
+--------------------------------------------------------------------------------
+Data Abstraction 
+Create an abstract class Vehicle with an abstract method start(). Implement it in subclasses Car and Bike.
+
+#Encapsulation
+# Create an abstract class Vehicle with an abstract method start(). 
+# Implement it in subclasses Car and Bike.
+from abc import ABC, abstractmethod
+class Vehicle(ABC):
+   @abstractmethod
+   def start(self): 
+    pass
+
+class car(Vehicle):
+  def start(self): 
+      print("Start Car...")
+class Bike(Vehicle):
+  def start(self): 
+      print("Start Bike...")
+
+c= car()
+c.start()
+b=Bike()
+b.start()
+
+-------------------------------------------------------------------------
+
+
+# Create an abstract class Shape with abstract methods area() and perimeter(). 
+# Implement these in Circle and Square.
+from abc import ABC, abstractmethod
+class Shape(ABC):
+   @abstractmethod
+   def area(self): 
+        pass
+    
+   @abstractmethod
+   def perimeter(self): 
+       pass
+class Circle(Shape):
+    def area(self):
+        print("Area of circle...")
+
+    def perimeter(self):
+        print("Perimeter of circle...")
+
+class Square(Shape):
+    def area(self):
+        print("Area of square...")
+
+    def perimeter(self):
+        print("Perimeter of square...")
+
+
+c=Circle()
+c.perimeter()
+b=Square()
+b.area()
